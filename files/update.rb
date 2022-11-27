@@ -129,7 +129,7 @@ end
 
   list = Dir.glob("/var/lib/xroad/public/anchors/*.xml")
    for i in list do
-    dit_anchor(File.read i) 
+    edit_anchor(File.read i) 
    end        
   puts list.length()
 
