@@ -6,21 +6,11 @@ require 'base64'
 require 'openssl'
 
 
-def log(msn)
-       data = Time.now.strftime("%F %T") + "   " + msn + "\n"
-       File.open("/var/lib/xroad/public/registro","a"){
-                                                        |f| f.write data
-                                                         f.chmod(0755)
-                                                      }
-end
-
-
 def get_data(url)
     uri = URI.parse(url)
     response = Net::HTTP.get_response(uri)
     data = response.body
 end
-
 
 def process_sharedparams(data)
 
@@ -50,13 +40,9 @@ def process_sharedparams(data)
 
 end
 
-
-
 def load_anchor(name_anchor)
         anchor = File.read '/var/lib/xroad/public/anchors/' + name_anchor
 end 
-
-
 
 def edit_anchor(anchor)
 
@@ -132,18 +118,19 @@ def edit_anchor(anchor)
 end
 
 
-    count = Dir.glob("/var/lib/xroad/public/V2_/*").length
-     if count >= 6 
+
+  count = Dir.glob("/var/lib/xroad/public/V2_/*").length
+   if count >= 6 
     	FileUtils.rm_rf("/var/lib/xroad/public/V2_")
-     else 
-   	 puts count
-     end
+   else 
+      puts count
+   end
 
 
-    list = Dir.glob("/var/lib/xroad/public/anchors/*.xml")
-     for i in list do
-  	edit_anchor(File.read i) 
-     end        
-    puts list.length()
+  list = Dir.glob("/var/lib/xroad/public/anchors/*.xml")
+   for i in list do
+    dit_anchor(File.read i) 
+   end        
+  puts list.length()
 
 
