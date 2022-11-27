@@ -11,9 +11,12 @@ El bash que se ejecuta realiza las siguientes funciones:
 - se instala última versión de ruby
 - edita el cron de xroad center-service y programa la ejecución de este servicio
  
-./install.sh
+
+sudo ./install.sh
 
 
+
+********
 NOTA: Es importante tener en cuenta que para una correcta federación se debe editar el archivo /etc/xroad/conf.d/local.ini en el servidor de seguridad de la siguiente forma:
 
 [configuration-client]
