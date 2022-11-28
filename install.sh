@@ -6,7 +6,7 @@ sudo apt install ruby
 mkdir /var/lib/xroad/public/key
 chgrp xroad /var/lib/xroad/public/key
 chown xroad /var/lib/xroad/public/key
-cp ./files/AND_cerrificate.crt /var/lib/xroad/public/key/AND_cerrificate.crt
+cp ./files/AND_cerificate.crt /var/lib/xroad/public/key/AND_cerrificate.crt
 cp ./files/AND_private.key /var/lib/xroad/public/key/AND_private.key
 
 cp ./files/update.rb  /var/lib/xroad/public/update.rb
