@@ -17,5 +17,6 @@ chmod 755 /var/lib/xroad/public/update.rb
 cat ./files/xroad-center > /etc/cron.d/xroad-center
 
 echo "Actualización de subsistemas activado"
+echo ""
 echo "every thing it's ok, life is good..."
 echo ""
