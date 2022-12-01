@@ -1,6 +1,12 @@
 #!/bin/bash
 
 
+if [ ! -f /var/lib/xroad/public/ ]
+then
+    echo "error... no encuentra destino para guardar archivos"
+    exit 0
+fi
+
 sudo apt install ruby
 
 mkdir /var/lib/xroad/public/key
@@ -18,5 +24,7 @@ cat ./files/xroad-center > /etc/cron.d/xroad-center
 
 echo ""
 echo "subsystem update enabled"
-echo "every thing it's ok, life is cool..."
+echo "everything's ok..."
 echo ""
+
+

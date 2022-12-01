@@ -1,6 +1,6 @@
 # Actualización-subsistemas
 
-Este procedimiento se realiza en el servidor central Colombia como paso siguiente a la instalación del servidor X-road. 
+Este procedimiento se realiza en el servidor central Colombia como paso siguiente a la instalación del servidor. 
 
 Se instalan los siguientes componentes con el fin de crear un motor que permita mantener actualizados los subsistemas en los diferentes ecosistemas xroad que interactúan entre sí.
 
